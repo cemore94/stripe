@@ -62,6 +62,14 @@ $flag = $transaction->addTransaction($transactionData);
 
 // Redirect to success
 //header('Location: success.php?tid='.$charge->id.'&product='.$charge->description);
+$response = [];
 if($flag){
-  header ('Location: success.php?tid='.$charge->id.'&product='.$charge->description);
-}else{ echo "No se ejecuto ni merjas";}
+    $response["success"] = true;
+    $response["id"] = $charge->id;
+}else{
+    $response["success"] = false;
+    $response["id"] = null;
+    $response["mensaje"] = "No se ejecuto ni merjas";
+}
+
+echo json_encode($response);

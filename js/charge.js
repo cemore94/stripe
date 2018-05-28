@@ -69,5 +69,17 @@ function stripeTokenHandler(token) {
   form.appendChild(hiddenInput);
 
   // Submit the form
-  form.submit();
+  //form.submit();
+    sendToCharge();
+}
+function sendToCharge() {
+    $.ajax({
+        type: "POST",
+        url: 'charge.php',
+        data: $('#payment-form').serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+            console.log(data); // show response from the php script.
+        }
+    });
 }
