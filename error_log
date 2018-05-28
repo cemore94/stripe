@@ -1,0 +1,8 @@
+[22-May-2018 01:21:58 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\Authentication' with message 'Invalid API Key provided: sk_*********RKEY' in /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiRequestor.php:127
+Stack trace:
+#0 /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiRequestor.php(99): Stripe\ApiRequestor::_specificAPIError('{\n  "error": {\n...', 401, Array, Array, Array)
+#1 /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiRequestor.php(310): Stripe\ApiRequestor->handleErrorResponse('{\n  "error": {\n...', 401, Array, Array)
+#2 /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiRequestor.php(61): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 401, Array)
+#3 /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiOperations/Request.php(56): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#4 /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiOperations/Create.php(23): Stripe\ApiResource in /home/ao555yknrgdk/public_html/stripe/vendor/stripe/stripe-php/lib/ApiRequestor.php on line 127
+[22-May-2018 01:28:34 UTC] PHP Fatal error:  Call to a member function prepare() on null in /home/ao555yknrgdk/public_html/stripe/lib/pdo_db.php on line 37
